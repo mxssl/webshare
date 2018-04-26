@@ -2,7 +2,7 @@
 
 `webshare` is a CLI tool that provides web-interface for your local files.
 
-## How to use this programm
+## How to use this app
 
 Download binary for your system:
 
@@ -52,3 +52,5 @@ Flags:
 *  Start webshare server: `webshare serve -a 192.168.88.10 -d . -p 8080`
 
 *  Open your browser http://192.168.88.10:8080 and you will see files in directory that you picked
+
+*  To stop this app use `ctrl + c` combination
