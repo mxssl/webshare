@@ -1,8 +1,8 @@
-[![Build Status](https://travis-ci.org/mxssl/webshare.svg?branch=master)](https://travis-ci.org/mxssl/webshare)
-
 # Webshare
 
-Webshare is a CLI tool that provides web-interface for your local files.
+[![Build Status](https://travis-ci.org/mxssl/webshare.svg?branch=master)](https://travis-ci.org/mxssl/webshare)
+
+`Webshare` is a CLI tool that provides web-interface for your local files.
 
 ## How to use this programm
 
