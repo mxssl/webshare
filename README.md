@@ -30,7 +30,7 @@ Available Commands:
   version     Print the version number of Webshare
 ```
 
-`webshare server` - main command that you need
+`webshare serve` - main command that you need
 
 ```
   webshare serve [flags]
