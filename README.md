@@ -9,7 +9,7 @@ Windows: https://github.com/mxssl/webshare/releases/download/v1.0.0/webshare-1.0
 
 Linux: https://github.com/mxssl/webshare/releases/download/v1.0.0/webshare-1.0.0-linux-amd64
 
-Rename binary for convinient use
+Rename binary for convinient use:
 
 Windows: `ren webshare-1.0.0-windows-amd64.exe webshare.exe`
 
