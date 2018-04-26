@@ -43,7 +43,12 @@ Flags:
 ```
 
 1  Determine your local IP address
+
 **Windows:** `ipconfig`
+
 **Linux:** `ip addr`
+
 2  Start webshare server: `webshare serve -a 192.168.88.10 -d . -p 8080`
+
 3  Open your browser http://192.168.88.10:8080 and you will see files in directory that you picked
+
