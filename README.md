@@ -42,7 +42,7 @@ Flags:
   -p, --port string      listen this port (default "8080")
 ```
 
-*  Determine your local IP address
+Determine your local IP address
 
 **Windows:** `ipconfig`
 
