@@ -5,6 +5,7 @@ Webshare is a CLI tool that provides web-interface for your local files.
 ## How to use this programm
 
 Download binary for your system:
+
 Windows: https://github.com/mxssl/webshare/releases/download/v1.0.0/webshare-1.0.0-windows-amd64.exe
 
 Linux: https://github.com/mxssl/webshare/releases/download/v1.0.0/webshare-1.0.0-linux-amd64
