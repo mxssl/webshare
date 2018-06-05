@@ -2,8 +2,6 @@
 
 `webshare` is a CLI tool that provides web-interface for your local files.
 
-![logo](https://github.com/mxssl/webshare/raw/dev/Harddrive-icon.png)
-
 ## How to use this app
 
 Download binary for your system:
