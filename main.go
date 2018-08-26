@@ -1,6 +1,6 @@
 package main
 
-import "webshare/cmd"
+import "github.com/mxssl/webshare/cmd"
 
 func main() {
 	cmd.Execute()
