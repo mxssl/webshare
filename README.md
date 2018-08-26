@@ -6,21 +6,27 @@
 
 Download binary for your system:
 
-Windows: https://github.com/mxssl/webshare/releases/download/v1.0.0/webshare-1.0.0-windows-amd64.exe
+[Windows](https://github.com/mxssl/webshare/releases/download/v0.0.2/webshare-windows-amd64.exe)
 
-Linux: https://github.com/mxssl/webshare/releases/download/v1.0.0/webshare-1.0.0-linux-amd64
+[Linux](https://github.com/mxssl/webshare/releases/download/v0.0.2/webshare-linux-amd64)
+
+[MacOS](https://github.com/mxssl/webshare/releases/download/v0.0.2/webshare-darwin-amd64)
 
 Rename binary for convinient use:
 
-Windows: `ren webshare-1.0.0-windows-amd64.exe webshare.exe`
+Windows: `ren webshare-windows-amd64.exe webshare.exe`
 
-Linux: `mv webshare-1.0.0-linux-amd64 webshare`
+Linux: `mv webshare-linux-amd64 webshare`
+
+MacOS: `mv webshare-darwin-amd64 webshare`
 
 Then just run:
 
 Windows: `webshare.exe`
 
-Linux: `webshare`
+Linux: `./webshare`
+
+MacOS: `./webshare`
 
 ```
   webshare [command]
@@ -48,6 +54,8 @@ Flags:
 **Windows:** `ipconfig`
 
 **Linux:** `ip addr`
+
+**MacOS** `ifconfig`
 
 *  Start webshare server: `webshare serve -a 192.168.88.10 -d . -p 8080`
 
