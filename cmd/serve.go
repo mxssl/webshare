@@ -2,12 +2,13 @@ package cmd
 
 import (
 	"context"
-	"github.com/spf13/cobra"
 	"log"
 	"net/http"
 	"os"
 	"os/signal"
 	"syscall"
+
+	"github.com/spf13/cobra"
 )
 
 // serveCmd represents the serve command
@@ -21,9 +22,13 @@ Webshare is a CLI tool that provides web-interface for your local files`,
 	},
 }
 
-// variables for command's flags
+// Path to files
 var Path string
+
+// IP address
 var IP string
+
+// Port for tcp socket
 var Port string
 
 func init() {
@@ -48,7 +53,8 @@ func init() {
 }
 
 func webshareServer(Port string, IP string, Path string) {
-	log.Printf("webshare server started on IP: %v, Port: %v, Path to files: %v", IP, Port, Path)
+	log.Printf("webshare server started on IP: %v, Port: %v, Path to files: %v\n", IP, Port, Path)
+	log.Printf("url: http://%v:%v\n", IP, Port)
 	ipAddressPort := IP + ":" + Port
 
 	// handler for path

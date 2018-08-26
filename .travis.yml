@@ -1,7 +1,6 @@
 language: go
 
 go:
-  - "1.10"
   - master
 
 before_install:
@@ -9,4 +8,4 @@ before_install:
   - dep ensure
 
 script:
-  - go build
+  - make cross-compilation
