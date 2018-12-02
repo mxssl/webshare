@@ -51,20 +51,6 @@ Flags:
 
 *  Start webshare server: `webshare serve`
 
-* Determine your local ip
-
-**Windows:** `ipconfig`
-
-**Linux:** `ip addr`
-
-**MacOS** `ifconfig`
-
-* Determine your public ip
-
-```
-curl ntwrk.cf
-```
-
 *  Open your browser http://your_ip:8080 and you will see files in directory that you picked
 
 *  To stop this app use `ctrl + c` combination
