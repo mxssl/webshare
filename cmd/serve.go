@@ -60,19 +60,23 @@ func webshareServer(Port string, IP string, Path string) {
 
 	log.Printf("webshare server started on IP: %v, Port: %v, Path to files: %v\n", IP, Port, Path)
 
-	localIP, err := getLocalIP()
-	if err != nil {
-		log.Printf("cannot obtain local ip. Error: %v\n", err)
-	}
+	if IP == "0.0.0.0" {
+		localIP, err := getLocalIP()
+		if err != nil {
+			log.Printf("cannot obtain local ip. Error: %v\n", err)
+		} else {
+			log.Printf("local url: http://%s:%s\n", localIP, Port)
+		}
 
-	log.Printf("local url: http://%s:%s\n", localIP, Port)
-
-	globalIP, err := getGlobalIP()
-	if err == nil {
-		log.Printf("global url: http://%s:%s\n", globalIP, Port)
-		log.Println("you need to have public static ip or NAT configured to use global url")
+		globalIP, err := getGlobalIP()
+		if err != nil {
+			log.Printf("cannot obtain global ip. Error: %v\n", err)
+		} else {
+			log.Printf("global url: http://%s:%s\n", globalIP, Port)
+			log.Println("you need to have public static ip or NAT configured to use global url")
+		}
 	} else {
-		log.Printf("cannot abtain global ip. Error: %v\n", err)
+		log.Printf("url: http://%v:%v\n", IP, Port)
 	}
 
 	// handler for path

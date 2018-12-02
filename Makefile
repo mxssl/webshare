@@ -24,4 +24,4 @@ build-linux:
 build-darwin:
 	env GOOS=darwin GOARCH=amd64 go build -o ${BINARY_NAME}-darwin-amd64 -v
 build-windows:
-	env GOOS=windows GOARCH=amd64 go build -o ${BINARY_NAME}-windows-amd64 -v
+	env GOOS=windows GOARCH=amd64 go build -o ${BINARY_NAME}-windows-amd64.exe -v

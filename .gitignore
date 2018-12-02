@@ -1,3 +1,6 @@
 .idea
 webshare.exe
 webshare
+webshare-darwin-amd64
+webshare-linux-amd64
+webshare-windows-amd64.exe
