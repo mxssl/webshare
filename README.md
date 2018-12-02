@@ -6,11 +6,11 @@
 
 Download binary for your system:
 
-[Windows](https://github.com/mxssl/webshare/releases/download/v0.0.2/webshare-windows-amd64.exe)
+[Windows](https://github.com/mxssl/webshare/releases/download/v0.0.3/webshare-windows-amd64.exe)
 
-[Linux](https://github.com/mxssl/webshare/releases/download/v0.0.2/webshare-linux-amd64)
+[Linux](https://github.com/mxssl/webshare/releases/download/v0.0.3/webshare-linux-amd64)
 
-[MacOS](https://github.com/mxssl/webshare/releases/download/v0.0.2/webshare-darwin-amd64)
+[MacOS](https://github.com/mxssl/webshare/releases/download/v0.0.3/webshare-darwin-amd64)
 
 Rename binary for convinient use:
 
@@ -50,20 +50,6 @@ Flags:
 ```
 
 *  Start webshare server: `webshare serve`
-
-* Determine your local ip
-
-**Windows:** `ipconfig`
-
-**Linux:** `ip addr`
-
-**MacOS** `ifconfig`
-
-* Determine your public ip
-
-```
-curl ntwrk.cf
-```
 
 *  Open your browser http://your_ip:8080 and you will see files in directory that you picked
 
