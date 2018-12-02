@@ -2,10 +2,13 @@ package cmd
 
 import (
 	"context"
+	"io/ioutil"
 	"log"
+	"net"
 	"net/http"
 	"os"
 	"os/signal"
+	"strings"
 	"syscall"
 
 	"github.com/spf13/cobra"
@@ -43,7 +46,7 @@ func init() {
 	serveCmd.Flags().StringVarP(&IP,
 		"address",
 		"a",
-		"127.0.0.1",
+		"0.0.0.0",
 		"IP address of needed interface")
 	serveCmd.Flags().StringVarP(&Port,
 		"port",
@@ -53,9 +56,24 @@ func init() {
 }
 
 func webshareServer(Port string, IP string, Path string) {
-	log.Printf("webshare server started on IP: %v, Port: %v, Path to files: %v\n", IP, Port, Path)
-	log.Printf("url: http://%v:%v\n", IP, Port)
 	ipAddressPort := IP + ":" + Port
+
+	log.Printf("webshare server started on IP: %v, Port: %v, Path to files: %v\n", IP, Port, Path)
+
+	localIP, err := getLocalIP()
+	if err != nil {
+		log.Printf("cannot obtain local ip. Error: %v\n", err)
+	}
+
+	log.Printf("local url: http://%s:%s\n", localIP, Port)
+
+	globalIP, err := getGlobalIP()
+	if err == nil {
+		log.Printf("global url: http://%s:%s\n", globalIP, Port)
+		log.Println("you need to have public static ip or NAT configured to use global url")
+	} else {
+		log.Printf("cannot abtain global ip. Error: %v\n", err)
+	}
 
 	// handler for path
 	fs := http.FileServer(http.Dir(Path))
@@ -73,4 +91,38 @@ func webshareServer(Port string, IP string, Path string) {
 	<-signalChan
 	log.Println("Shutdown signal received, exiting...")
 	Server.Shutdown(context.Background())
+}
+
+func getLocalIP() (string, error) {
+	conn, err := net.Dial("udp", "8.8.8.8:53")
+	if err != nil {
+		log.Println(err)
+		return "", err
+	}
+	defer conn.Close()
+
+	localAddr := conn.LocalAddr().(*net.UDPAddr)
+
+	ip := localAddr.IP.String()
+
+	return ip, nil
+}
+
+func getGlobalIP() (string, error) {
+
+	res, err := http.Get("http://ntwrk.cf")
+	if err != nil {
+		log.Println(err)
+		return "", err
+	}
+
+	body, err := ioutil.ReadAll(res.Body)
+	if err != nil {
+		log.Println(err)
+		return "", err
+	}
+
+	ip := string(body)
+
+	return strings.TrimSpace(ip), nil
 }

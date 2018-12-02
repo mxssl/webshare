@@ -43,13 +43,15 @@ Available Commands:
   webshare serve [flags]
 
 Flags:
-  -a, --address string   IP address of needed interface (default "127.0.0.1")
+  -a, --address string   IP address of needed interface (default "0.0.0.0")
   -d, --dir string       path to files that you want to share (default ".")
   -h, --help             help for serve
   -p, --port string      listen this port (default "8080")
 ```
 
-*  Determine your local IP address
+*  Start webshare server: `webshare serve`
+
+* Determine your local ip
 
 **Windows:** `ipconfig`
 
@@ -57,8 +59,12 @@ Flags:
 
 **MacOS** `ifconfig`
 
-*  Start webshare server: `webshare serve -a 192.168.88.10 -d . -p 8080`
+* Determine your public ip
 
-*  Open your browser http://192.168.88.10:8080 and you will see files in directory that you picked
+```
+curl ntwrk.cf
+```
+
+*  Open your browser http://your_ip:8080 and you will see files in directory that you picked
 
 *  To stop this app use `ctrl + c` combination
