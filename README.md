@@ -6,11 +6,11 @@
 
 Download binary for your system:
 
-[Windows](https://github.com/mxssl/webshare/releases/download/v0.0.2/webshare-windows-amd64.exe)
+[Windows](https://github.com/mxssl/webshare/releases/download/v0.0.3/webshare-windows-amd64.exe)
 
-[Linux](https://github.com/mxssl/webshare/releases/download/v0.0.2/webshare-linux-amd64)
+[Linux](https://github.com/mxssl/webshare/releases/download/v0.0.3/webshare-linux-amd64)
 
-[MacOS](https://github.com/mxssl/webshare/releases/download/v0.0.2/webshare-darwin-amd64)
+[MacOS](https://github.com/mxssl/webshare/releases/download/v0.0.3/webshare-darwin-amd64)
 
 Rename binary for convinient use:
 
